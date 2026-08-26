@@ -1,27 +1,22 @@
-# GPT-Researcher Direct Dependencies
-# Python 3.10+ required for LangChain v1
-
 # Core Framework
 fastapi>=0.104.1
 uvicorn>=0.24.0.post1
 pydantic>=2.5.1
 python-dotenv>=1.0.0
+streamlit>=1.28.0
 
-# LangChain v1
+# LangChain
 langchain>=1.0.0
-langchain-classic>=1.0.0
 langchain-community>=0.4.0
 langchain-core>=1.0.0
-langchain-ollama>=1.0.0
 langchain-openai>=1.0.0
 langchain-text-splitters>=1.0.0
 langgraph>=0.2.76
+langchain-huggingface>=0.0.1
 
 # LLM Providers
 openai>=1.3.3
-ollama>=0.4.8
 litellm>=1.71.0
-google-genai>=1.0.0  # For image generation with Imagen
 
 # Search & Research
 tavily-python>=0.7.12
@@ -30,7 +25,7 @@ arxiv>=2.0.0
 
 # Document Processing
 beautifulsoup4>=4.12.2
-brotli>=1.2.0  # < 1.2.0 has no decompression size limit (CVE-2025-6176 decompression-bomb DoS)
+brotli>=1.2.0
 pymupdf>=1.23.6
 python-docx>=1.1.0
 python-pptx>=1.0.0
@@ -41,6 +36,8 @@ pandas>=2.0.0
 # Vector Store & Embeddings
 tiktoken>=0.7.0
 numpy>=2.0.0,<2.3.0
+sentence-transformers>=2.2.0
+huggingface-hub>=0.19.0
 
 # Utilities
 aiofiles>=23.2.1
@@ -51,64 +48,19 @@ pyyaml>=6.0.1
 jinja2>=3.1.6
 loguru>=0.7.2
 colorama>=0.4.6
+json-repair>=0.29.8
+json5>=0.9.25
+markdown>=3.5.1
 
 # Output Formats
 md2pdf>=1.0.1
 mistune>=3.0.2
 htmldocx>=0.0.6
 
-# MCP Support (optional)
-mcp>=1.9.1
-langchain-mcp-adapters>=0.1.0
-
 # Data Handling
 sqlalchemy>=2.0.28
 python-multipart>=0.0.6
-json-repair>=0.29.8
-json5>=0.9.25
-markdown>=3.5.1
 
-
-streamlit>=1.28.0
-
-streamlit>=1.28.0
-# Core
-streamlit>=1.28.0
-pydantic>=2.0
-requests>=2.31.0
-python-dotenv>=1.0.0
-
-# GPT Researcher base dependencies
-aiofiles>=23.0.0
-json-repair>=0.15.0
-langchain>=0.1.0
-langchain-community>=0.0.20
-langchain-huggingface>=0.0.1
-langgraph>=0.0.40
-openai>=1.0.0
-tavily-python>=0.3.0
-beautifulsoup4>=4.12.0
-lxml>=4.9.0
-markdown>=3.5.0
-md2pdf>=1.0.0
-python-docx>=1.1.0
-weasyprint>=60.0
-duckduckgo-search>=3.9.0
-httpx>=0.25.0
-unstructured>=0.11.0
-selenium>=4.15.0
-webdriver-manager>=4.0.0
-
-# Embeddings (local, free)
-sentence-transformers>=2.2.0
-huggingface-hub>=0.19.0
-
-# Async
-asyncio>=3.4.3
-aiohttp>=3.9.0
-
-# Utilities
-tiktoken>=0.5.0
-jinja2>=3.1.0
-pyyaml>=6.0.1
-loguru>=0.7.0
+# MCP Support (optional)
+mcp>=1.9.1
+langchain-mcp-adapters>=0.1.0
